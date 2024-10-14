@@ -16,10 +16,16 @@ import com.example.newsapp.ui.theme.NewsAppTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
+            NewsAppTheme {
 
+            }
         }
     }
+}
+
+@Composable
+fun NewsAppEntryPoint(){
+
 }
 
