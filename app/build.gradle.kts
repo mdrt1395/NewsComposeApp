@@ -51,4 +51,6 @@ dependencies {
     implementation(Dependencies.composeUiToolingPreview)
     implementation(Dependencies.composeMaterial3)
 
+    implementation (project(Modules.utilities))
+
 }
