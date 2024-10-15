@@ -37,5 +37,6 @@ dependencies {
     implementation(Dependencies.coreKtx)
     implementation(Dependencies.appcompat)
     implementation(Dependencies.material)
+    testImplementation(libs.junit.junit)
 
 }

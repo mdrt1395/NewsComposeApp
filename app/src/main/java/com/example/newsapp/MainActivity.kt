@@ -15,8 +15,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.newsapp.ui.theme.NewsAppTheme
-import com.example.newsapp.ui.theme.components.NewsAppNavigationGraph
+import com.example.newsapp.ui.navigation.NewsAppNavigationGraph
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
