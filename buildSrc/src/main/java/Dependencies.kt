@@ -17,8 +17,7 @@ object Dependencies {
     val lifecycleViewModelKtx by lazy { "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewModelKtx}" }
 
     val hiltAndroid by lazy {"com.google.dagger:hilt-android:${Versions.hilt}"}
-    val hiltAndroidCompiler by lazy { "com.google.dagger:hilt-android-compiler:${Versions.hiltCompiler}" }
-    val hiltCompiler by lazy { "androidx.hilt:hilt-compiler:${Versions.hiltCompiler}" }
+
 
 }
 
