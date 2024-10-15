@@ -55,11 +55,10 @@ dependencies {
 
     implementation (project(Modules.utilities))
     implementation(Dependencies.hiltAndroid)
-    implementation("com.google.dagger:hilt-android:2.51.1")
+    implementation(libs.hilt.android)
     implementation(libs.androidx.navigation.compose)
-    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
-    implementation(Dependencies.hiltNavigationCompose)
-
+    kapt(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
 }
 
 kapt {
