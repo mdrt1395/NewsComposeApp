@@ -53,12 +53,21 @@ dependencies {
     implementation(Dependencies.composeUiToolingPreview)
     implementation(Dependencies.composeMaterial3)
 
+    //Hilt and navegation
     implementation (project(Modules.utilities))
     implementation(Dependencies.hiltAndroid)
     implementation(libs.hilt.android)
     implementation(libs.androidx.navigation.compose)
     kapt(libs.hilt.android.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
+
+    //Retrofit
+    implementation(libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation (libs.okhttp)
+    implementation(libs.converter.moshi)
+    implementation(libs.moshi)
+    implementation(libs.logging.interceptor)
 }
 
 kapt {

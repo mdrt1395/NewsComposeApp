@@ -6,7 +6,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class NewsAppViewModel :ViewModel() {
+class NewsAppViewModel @Inject constructor():ViewModel() {
 
     init {
         Log.d(TAG, "Init block of NewsAppViewModel")

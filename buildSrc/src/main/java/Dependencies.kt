@@ -19,6 +19,8 @@ object Dependencies {
     val hiltAndroid by lazy {"com.google.dagger:hilt-android:${Versions.hilt}"}
     val hiltNavigationCompose by lazy { "androidx.hilt:hilt-navigation-fragment:${Versions.hiltNavigation}" }
 
+    val retrofit by lazy {"com.squareup.retrofit2"}
+
 }
 
 object Modules {
