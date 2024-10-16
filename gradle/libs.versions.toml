@@ -15,6 +15,7 @@ appcompat = "1.6.1"
 loggingInterceptor = "4.10.0"
 material = "1.10.0"
 moshi = "1.15.0'"
+moshiKotlin = "1.15.0"
 navigationCompose = "2.8.2"
 junitJunit = "4.12"
 okhttp = "4.10.0"
@@ -46,6 +47,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 junit-junit = { group = "junit", name = "junit", version.ref = "junitJunit" }
 moshi = { module = "'com.squareup.moshi:moshi", version.ref = "moshi" }
+moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshiKotlin" }
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 

@@ -66,7 +66,7 @@ dependencies {
     implementation (libs.converter.gson)
     implementation (libs.okhttp)
     implementation(libs.converter.moshi)
-    implementation(libs.moshi)
+    implementation(libs.moshi.kotlin)
     implementation(libs.logging.interceptor)
 }
 

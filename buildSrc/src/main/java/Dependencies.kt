@@ -21,6 +21,7 @@ object Dependencies {
 
     val retrofit by lazy {"com.squareup.retrofit2"}
 
+
 }
 
 object Modules {
