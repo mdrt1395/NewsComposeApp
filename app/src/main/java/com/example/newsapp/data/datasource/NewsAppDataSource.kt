@@ -1,7 +1,7 @@
 package com.example.newsapp.data.datasource
 
 import com.example.newsapp.data.entity.NewsAppResponse
-import okhttp3.Response
+import retrofit2.Response
 
 interface NewsAppDataSource {
 
