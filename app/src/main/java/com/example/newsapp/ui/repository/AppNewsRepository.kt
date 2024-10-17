@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.flow
 import retrofit2.Response
 import javax.inject.Inject
 
-class AppNewsRepository @Inject constructor(
+class NewsAppRepository @Inject constructor(
     private val newsAppDataSource: NewsAppDataSource
 ) {
     //    suspend fun getNewsAppHeadline(country:String): Response<NewsAppResponse>{

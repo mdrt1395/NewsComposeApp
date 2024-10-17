@@ -4,6 +4,7 @@ import com.example.newsapp.data.AppConstants
 import com.example.newsapp.data.api.ApiService
 import com.example.newsapp.data.datasource.NewsAppDataSource
 import com.example.newsapp.data.datasource.NewsDataSourceImpl
+import com.example.newsapp.ui.repository.NewsAppRepository
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -45,16 +46,24 @@ class AppModule {
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
     }
+
+    @Singleton
+    @Provides
+    fun providesApiService(retrofit: Retrofit): ApiService{
+        return retrofit.create(ApiService::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun providesAppNewsDataSource(apiService: ApiService): NewsAppDataSource{
+        return NewsDataSourceImpl(apiService)
+    }
+
+    @Singleton
+    @Provides
+    fun providesNewsAppRepository(newsAppDataSource: NewsAppDataSource): NewsAppRepository {
+        return NewsAppRepository(newsAppDataSource)
+    }
+
 }
 
-@Singleton
-@Provides
-fun providesApiService(retrofit: Retrofit): ApiService{
-    return retrofit.create(ApiService::class.java)
-}
-
-@Singleton
-@Provides
-fun providesAppNewsDataSource(apiService: ApiService): NewsAppDataSource{
-    return NewsDataSourceImpl(apiService)
-}
