@@ -65,9 +65,15 @@ dependencies {
     implementation(libs.retrofit)
     implementation (libs.converter.gson)
     implementation (libs.okhttp)
-    implementation(libs.converter.moshi)
+    implementation ("com.squareup.retrofit2:converter-moshi:2.9.0")
     implementation(libs.moshi.kotlin)
     implementation(libs.logging.interceptor)
+
+    //Coroutines
+    implementation (libs.kotlinx.coroutines.core) // or the latest version
+    implementation (libs.kotlinx.coroutines.android) // or the latest version
+
+
 }
 
 kapt {

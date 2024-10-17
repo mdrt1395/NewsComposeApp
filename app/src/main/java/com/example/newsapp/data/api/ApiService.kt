@@ -9,7 +9,7 @@ interface ApiService {
     //Minutes 42-44
 
     @GET("v2/top-headlines")
-    fun getNewsHeadline(
+    suspend fun getNewsHeadline(
         @Query("country") country: String, @Query("apiKey") apiKey: String = "YOUR_API_KEY"
     ): Response <NewsAppResponse>
 
