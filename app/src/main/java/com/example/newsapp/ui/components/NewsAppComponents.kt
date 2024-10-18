@@ -18,25 +18,23 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.newsapp.data.entity.Article
 import com.example.newsapp.data.entity.NewsAppResponse
 
 
 @Composable
-
-fun Loader(){
-    Column (
+fun Loader() {
+    Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
-    ){
+    ) {
         CircularProgressIndicator(
-            modifier =
-            Modifier
+            modifier = Modifier
                 .size(50.dp)
-                .padding(10.dp),
-            color = Color.Black
+                .padding(10.dp), color = Color.Black
         )
     }
 
@@ -44,26 +42,32 @@ fun Loader(){
 
 
 @Composable
-fun NewsList(response: NewsAppResponse){
+fun NewsList(response: NewsAppResponse) {
     LazyColumn {
-        items(response.articles){ article ->
+        items(response.articles) { article ->
             NormalTextComponent(textValue = article.title ?: "NA")
         }
     }
 }
 
 @Composable
-fun NormalTextComponent(textValue:String){
-    Text(modifier = Modifier
-        .fillMaxWidth()
-        .wrapContentHeight()
-        .padding(8.dp),
+fun NormalTextComponent(textValue: String) {
+    Text(
+        modifier = Modifier
+            .fillMaxWidth()
+            .wrapContentHeight()
+            .padding(8.dp),
         text = textValue,
         style = TextStyle(
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Normal,
-            color = Color.Black
+            fontSize = 18.sp, fontWeight = FontWeight.Normal, color = Color.Black
 
-        ))
+        )
+    )
+}
+
+@Composable
+fun NewsRowComponent(page:Int, article: Article){
+    NormalTextComponent(textValue = "$page \n\n ${article.title}")
+
 }
 

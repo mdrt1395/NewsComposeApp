@@ -73,6 +73,13 @@ dependencies {
     implementation (libs.kotlinx.coroutines.core) // or the latest version
     implementation (libs.kotlinx.coroutines.android) // or the latest version
 
+    //Splash Screen
+    implementation ("androidx.core:core-splashscreen:1.0.0")
+
+    //Coil (for images)
+    implementation ("io.coil-kt:coil:2.4.0")
+
+
 
 }
 
