@@ -9,11 +9,11 @@ data class NewsAppResponse(
 data class Article (
     val author: String,
     val title: String,
-    val description: String,
+    val description: String? = null,
     val url: String,
-    val urlToImage:String,
+    val urlToImage:String?= null,
     val publishedAt: String,
-    val content: String,
+    val content: String?= null,
     val source: Source
 )
 

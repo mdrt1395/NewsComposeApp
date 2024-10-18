@@ -1,6 +1,7 @@
 package com.example.newsapp.ui.screens
 
 import Loader
+import NewsList
 import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
@@ -37,11 +38,14 @@ fun HomeScreen(
             }
 
             is ResourceState.Success -> {
-                Log.d(TAG, "Success")
+                val response = (newsResponse as ResourceState.Success).data
+                Log.d(TAG, "Success ${response.status} = ${response.totalResults} ")
+                NewsList(response)
             }
 
             is ResourceState.Error -> {
-                Log.d(TAG, "Inside_Error")
+                val error = (newsResponse as ResourceState.Error)
+                Log.d(TAG, "Inside_Error ${error}")
             }
         }
 

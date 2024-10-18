@@ -1,6 +1,5 @@
 package com.example.newsapp.ui.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.newsapp.data.AppConstants
@@ -31,8 +30,8 @@ class NewsAppViewModel @Inject constructor(
         //Dispatchers.IO makes the following code run on a background thread
         viewModelScope.launch (Dispatchers.IO) {
             newsAppRepository.getNewsAppHeadline(country)
-                .collectLatest { NewsAppResponse ->
-                    _news.value = NewsAppResponse
+                .collectLatest { newsAppResponse ->
+                    _news.value = newsAppResponse
                 }
         }
     }
