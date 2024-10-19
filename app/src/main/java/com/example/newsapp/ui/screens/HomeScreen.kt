@@ -1,5 +1,6 @@
 package com.example.newsapp.ui.screens
 
+import EmptyStateComponent
 import Loader
 import NewsList
 import NewsRowComponent
@@ -52,7 +53,7 @@ fun HomeScreen(
                 if(response.articles.isNotEmpty()){
                     NewsRowComponent(page, response.articles.get(page))
                 } else {
-
+                    EmptyStateComponent()
                 }
 
             }

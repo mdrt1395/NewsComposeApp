@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NewsApp</string>
+    <string name="no_news_now_check_later">No news now, check later</string>
 </resources>
