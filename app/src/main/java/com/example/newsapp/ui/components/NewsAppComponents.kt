@@ -1,6 +1,7 @@
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -112,9 +113,30 @@ fun NewsRowComponent(page: Int, article: Article) {
 
         Spacer(modifier = Modifier.size(10.dp))
 
-        HeadingTextComponent(textValue = article.description?:"")
+        NormalTextComponent(textValue = article.description?:"")
+
+        Spacer(modifier = Modifier.weight(1f))
+
+        AuthorDetailsComponent(article.author, article.source?.name)
+
 
     }
 
 }
 
+@Composable
+fun AuthorDetailsComponent(authorName: String?, sourceName: String?){
+    Row(modifier = Modifier.fillMaxWidth().padding(start = 10.dp, end = 10.dp, bottom = 24.dp)){
+
+        authorName?.also {
+            Text(text = it)
+        }
+
+        Spacer(modifier = Modifier.weight(1f))
+
+        sourceName?.also {
+            Text(text = it)
+        }
+
+    }
+}
